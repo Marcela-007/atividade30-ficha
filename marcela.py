@@ -4,7 +4,7 @@
 MediaIdade = 0
 SomaIdade = 0
 HomemMaisvelho = 0
-MaiorIdadeHomem = ''
+MaiorIdadeHomem = 0
 MulheresMenor20 = 0
 
 for item in range(1,5):
@@ -14,14 +14,14 @@ for item in range(1,5):
     sexo = sexo.upper()
 
     SomaIdade += idade
+MaiorIdadeHomem = idade
+HomemMaisvelho = nome
     
-    if sexo == 'M' and idade >= MaiorIdadeHomem:
-        MaiorIdadeHomem = idade
-        HomemMaisvelho = nome
-    if sexo == 'F' and idade < 20:
+if sexo == 'M' and idade == MaiorIdadeHomem:
+    
+      if sexo == 'F' and idade < 20:
         MulheresMenor20 += 1
-    else:
-        print('Sexo infalido')
+
 
 MediaIdade = SomaIdade/4
 
